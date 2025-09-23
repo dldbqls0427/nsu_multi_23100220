@@ -1,0 +1,19 @@
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    caption-side: bottom;
+}
+caption {
+    text-align: right;
+}
+th {
+    text-align: center;
+}
+td{text-align: right;}
+th, td {
+    padding: 10px;
+    border: 1px solid black;
+}
+.mint,td:last-child {
+    background-color: #e5f6f6;
+}
