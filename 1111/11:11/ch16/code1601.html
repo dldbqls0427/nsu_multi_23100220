@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            // let radius;
+            // // radius = 10;
+            // const PI = 3.141592;
+            // // PI = 3.14;
+            // let area;
+            // area = PI * radius * radius;
+            // console.log("넓이는 "+ area);
+            // let name;
+            // let classRoom;
+            // name = 'kim';
+            // classRoom = 204;
+            // console.log('이름은 '+name+'교실은 '+classRoom);
+
+            let userNumber1 = parseInt(prompt('첫번째 숫자를 입력하세요.'));
+            let userNumber2 = parseInt(prompt('두번쨰 숫자를 입력하세요.'));
+            let op = prompt("연산자를 입력하시오");
+            let result;
+            if (op == '+'){
+                result = userNumber1 + userNumber2;
+            } else if (op == '-'){
+                result = userNumber1 - userNumber2;
+            } else if(op == '*')
+                result = userNumber1 * userNumber2;
+            else
+                result = 0;
+            console.log((userNumber1+op+userNumber2)=result)
+            
+    </script>
+</body>
+</html>
