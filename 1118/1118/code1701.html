@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let number1 = parseInt(prompt('시작 숫자는'));
+        let number2 = parseInt(prompt('종료 숫자는'));
+
+       function loopSum(max1, max2){
+        let sum =0;
+        for(let i=max1; i <=max2 ; i++){
+            if(i%2==0);
+            surm+=i;
+        }
+        return sum;
+       }
+    //    function max(num1, num2) {
+    //     return num1 > num2 ? num1 : num2 ;
+    //    }
+    
+    //    let max = function(num1, num2) {
+    //     return num1 > num2 ? num1 : num2 ;
+    //    }
+       max= (num1, num2 ) => num1 > num2 ? num1 : num2;
+       document.writeln(`${number1} ~ ${number2} 합은 ${loopSum(number1, number2)}`);
+       document.writeln(` 큰 수는 ${max (number1, number2)}`);
+    </script>
+</body>
+</html>
