@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가위바위보</title>
+</head>
+<body>
+    <h1>**가위바위보 게임**</h1>
+    <p>
+        아래 버튼을 눌러 게임을 시작하세요!
+        <br>
+        ** 1 : 가위 , 2 : 바위 , 3 : 보 **를 입력하게 됩니다.
+    </p>
+    <button onclick="playSimpleGame()">게임시작</button>
+    <div class="result" id="gameResult">여기에 게임 결과가 표시됩니다.</div>
+    <script>
+        function playSimpleGame() {
+            const output = document.getElementById('gameResult');
+
+            const input = prompt("1 : 가위 , 2 : 바위 , 3 : 보 중 하나를 입력하세요.","1");
+            const player = parseInt(input);
+
+            if (isNaN(player) || player < 1 || player > 3 ) {
+                output.textContent - "1,2,3 중 올바른 숫자를 입력해야 합니다."
+                return;
+            }
+
+            const computer = Math.floor(Math.random()*3) + 1;
+
+            const choiceMap = { 1 : "가위", 2 : "바위", 3 : "보" };
+            const playerText = choiceMap[player];
+            const computerText = choiceMap[computer];
+
+            let result;
+
+            if (player === computer) {
+                result = "DRAW 비겼습니다.";
+            } else if (
+                (player === 1 && computer === 3) ||
+                (player === 2 && computer === 1) ||
+                (player === 3 && computer === 2)
+            ) {
+                result = " You Win 당신이 이겼습니다.";
+            }else {
+                result = "You Lose 컴퓨터가 이겼습니다.";
+            }
+
+            output.innerHTML = `
+                당신 : **${playerText}** (${player}) <br>
+                컴퓨터 : **${computerText}**(${computer}) <br>
+                결과 : **${result}** `
+        }
+    </script>
+</body>
+</html>
