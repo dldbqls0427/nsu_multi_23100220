@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button onclick="history.back();">뒤로가기</button>
+    </div>
+    <script>
+        let numbers = ['one', 'two', 'three','four'];
+        let number2 = new Array();
+
+        number2[0]='five';
+        // let num3 = numbers.concat (number2);
+        let num3 = number2.concat(numbers);
+
+        document.writeln('<ul>');
+        for (let i=0;i<numbers.length;i++)
+            document.writeln(`<li>${numbers[i]}</li>`);
+        document.writeln('</ul>');
+
+        let num21 =[1,2,3];
+        let str21 = num21.join();
+        let str22 = numbers.join('\t');
+        document.writeln('<p>' + str22);
+
+        let num31 = numbers.push('six', 'seven');
+        document.writeln('<p> push : ' + numbers);
+        num31 = numbers.unshift('zero','2zero');
+        document.writeln('<p> unshift() : ' + num31+ '...' +  numbers);
+        let numSplice = numbers.splice(1);
+        num31 = number.pop();
+        document.writeln('<p>pop() : ' + num31 + '...' + numSplice);
+        let numSplice1 = numbers.splice(2);
+        num31 = number.shift();
+        document.writeln('<p>shift() : ' + num31 + '...' + numbers);
+
+        let numbers5 = ['one', 'two', 'three', 'four'];
+        let numSplice2 = numbers.splice(1,2);
+        document.writeln('<p>splice() : ' + numSplice2);
+        document.writeln('<p>numbers : ' + numbers5);
+    </script>
+</body>
+</html>

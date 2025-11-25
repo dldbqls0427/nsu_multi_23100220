@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button onclick="history.back();">뒤로가기</button>
+    </div>
+    <ul>
+        <li><a href="#" onclick="openPopup()">열기</a></li>
+        <li></li>
+    </ul>
+    <script>
+        var newWin;
+        function openPopup(){
+            let newWin = window.open('notice.html', 'pop', 'windth=100, height=100');
+            if (newWin == null){
+                alert('팝업이 차단되었습니다.')
+            }
+        }
+        function closePopup(){
+            window.close();
+        }
+    </script>
+</body>
+</html>
